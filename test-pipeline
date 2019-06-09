@@ -1,5 +1,9 @@
 #!groovy
 
+node {
+   echo 'Hello World'
+}
+
 /*
 The MIT License
 Copyright (c) 2015-, CloudBees, Inc., and a number of other of contributors
@@ -90,3 +94,4 @@ node('node') {
     }
 
 }
+*/
