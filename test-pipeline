@@ -1,9 +1,5 @@
 #!groovy
 
-node {
-   echo 'Hello World'
-}
-
 /*
 The MIT License
 Copyright (c) 2015-, CloudBees, Inc., and a number of other of contributors
@@ -22,9 +18,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+*/
 
-
-node('node') {
+node ('dev-build.globalvirtual.world') {
 
 
     currentBuild.result = "SUCCESS"
@@ -42,16 +38,16 @@ node('node') {
 
          print "Environment will be : ${env.NODE_ENV}"
 
-      #   sh 'node -v'
-      #   sh 'npm prune'
-      #   sh 'npm install'
-      #   sh 'npm test'
+         sh 'node -v'
+         sh 'npm prune'
+         sh 'npm install'
+         sh 'npm test'
 
        }
 
        stage('Build Docker'){
 
-       #     sh './dockerBuild.sh'
+            sh './dockerBuild.sh'
        }
 
        stage('Deploy'){
@@ -60,15 +56,15 @@ node('node') {
          sh './dockerPushToRepo.sh'
 
          echo 'ssh to web server and tell it to pull new image'
-      #   sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
+         sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
 
        }
 
        stage('Cleanup'){
 
          echo 'prune and cleanup'
-       #  sh 'npm prune'
-       #  sh 'rm node_modules -rf'
+         sh 'npm prune'
+         sh 'rm node_modules -rf'
 
          mail body: 'project build successful',
                      from: 'xxxx@yyyyy.com',
@@ -94,4 +90,3 @@ node('node') {
     }
 
 }
-*/
