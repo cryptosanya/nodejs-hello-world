@@ -71,7 +71,7 @@ node ('dev-build.globalvirtual.world') {
          echo 'rm node_modules -rf'
 
          mail body: 'project build successful',
-                     from: 'crypto.sanya@gmail.com',
+                     from: 'sys@showmebiz.pro',
                      replyTo: 'openainow@gmail.com',
                      subject: 'project build successful',
                      to: 'andrii.kyianov@gmail.com'
@@ -85,7 +85,7 @@ node ('dev-build.globalvirtual.world') {
         currentBuild.result = "FAILURE"
 
             mail body: "project build error is here: ${env.BUILD_URL}" ,
-            from: 'crypto.sanya@gmail.com',
+            from: 'sys@showmebiz.pro',
             replyTo: 'openainow@gmail.com',
             subject: 'project build failed',
             to: 'andrii.kyianov@gmail.com'
