@@ -74,7 +74,7 @@ node ('dev-build.globalvirtual.world') {
                      from: 'crypto.sanya@gmail.com',
                      replyTo: 'openainow@gmail.com',
                      subject: 'project build successful',
-                     to: 'rocky@vpsget.com'
+                     to: 'andrii.kyianov@gmail.com'
        }
 
 
@@ -88,7 +88,7 @@ node ('dev-build.globalvirtual.world') {
             from: 'crypto.sanya@gmail.com',
             replyTo: 'openainow@gmail.com',
             subject: 'project build failed',
-            to: 'rocky@vpsget.com'
+            to: 'andrii.kyianov@gmail.com'
 
         throw err
     }
