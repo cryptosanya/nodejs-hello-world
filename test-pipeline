@@ -42,10 +42,10 @@ node ('dev-build.globalvirtual.world') {
 
          print "Environment will be : ${env.NODE_ENV}"
 
-         echo 'node -v'
-         echo 'npm prune'
-         echo 'npm install'
-         echo 'npm test'
+         sh 'node -v'
+         sh 'npm prune'
+         sh 'npm install'
+         sh 'npm test'
 
        }
 
@@ -67,8 +67,8 @@ node ('dev-build.globalvirtual.world') {
        stage('Cleanup'){
 
          echo 'prune and cleanup'
-         echo 'npm prune'
-         echo 'rm node_modules -rf'
+         sh 'npm prune'
+         sh 'rm node_modules -rf'
 
          mail body: 'project build successful',
                      from: 'sys@showmebiz.pro',
