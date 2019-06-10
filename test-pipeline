@@ -47,7 +47,7 @@ node ('dev-build.globalvirtual.world') {
          sh 'npm install'
          sh 'npm test'
 */
-               npm install
+               
        }
 
        stage('Build Docker'){
