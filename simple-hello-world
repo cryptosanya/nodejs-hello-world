@@ -1,3 +1,0 @@
-node ('dev-build.globalvirtual.world') {
-   echo 'Hello World'
-}
