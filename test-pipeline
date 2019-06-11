@@ -36,51 +36,19 @@ node ('dev-build.globalvirtual.world') {
           checkout scm
        }
 
-           environment {
-         NODE_ENV = "test"
-                }
- 
-        stage('Test'){
-                
-                steps {
+           stage('Test'){
+
+         env.NODE_ENV = "test"
+
+         print "Environment will be : ${env.NODE_ENV}"
                    sh 'printenv'
-                }
-        }       
-               
-               
-/*               
-               
-               Jenkinsfile (декларативный конвейер)
-pipeline {
-    agent any
-
-    environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
-    }
-
-    stages {
-        stage('Build') {
-            steps {
-                sh 'printenv'
-            }
-        }
-    }
-}
-               
-               
-  */             
-               
-               
-               
-
 /*
-
          sh 'node -v'
-         sh 'npm prune' 
+         sh 'npm prune'
          sh 'npm install'
          sh 'npm test'
 */
+       }
                
        }
 
