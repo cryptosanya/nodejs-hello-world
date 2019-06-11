@@ -40,7 +40,8 @@ node ('dev-build.globalvirtual.world') {
 
          env.NODE_ENV = "test"
 
-         print "Environment will be : ${env.NODE_ENV}"
+         print "Environment will be : ${env.NODE_ENV}"\
+         sh 'printenv'
                   
 /*
          sh 'node -v'
