@@ -51,8 +51,8 @@ node ('dev-build.globalvirtual.world') {
          //print "Environment 4 PATH+EXTRA = : ${env.PATH+EXTRA}"
          
          sh 'printenv'          
-  /*       sh 'node -v'
-         sh 'npm prune'
+        sh 'node -v'
+  /*        sh 'npm prune'
          sh 'npm install'
          sh 'npm test'
 */
