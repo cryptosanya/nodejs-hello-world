@@ -52,12 +52,12 @@ node ('dev-build.globalvirtual.world') {
          def command = "npm install"
          sh 'printenv'
                   
-
+/*
          sh 'node -v'
          sh 'npm prune'
          sh 'npm install'
          sh 'npm test'
-
+*/
                       
        }
 
