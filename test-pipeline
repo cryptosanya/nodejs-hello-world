@@ -30,6 +30,7 @@ node ('dev-build.globalvirtual.world') {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
         WORKSPACE  = '/home/jenkins/workspace/'
+        PATH = '/home/jenkins/workspace/'
     }
 
     currentBuild.result = "SUCCESS"
@@ -48,6 +49,7 @@ node ('dev-build.globalvirtual.world') {
 
          print "Environment 1 NODE_ENV= : ${env.NODE_ENV}"
          print "Environment 2 WORKSPACE = : ${env.WORKSPACE}"
+         print "Environment 2 PATH = : ${env.PATH}"
          def command = "npm install"
                    sh 'printenv'
                   
