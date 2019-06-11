@@ -1,7 +1,8 @@
 pipeline {
     agent { label 'dev-build.globalvirtual.world' }
     stages {
-        stage('build') {
+     withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin'])        
+     stage('build') {
             steps {
                 echo "Hello World!"
                 sh "echo Hello from the shell"
