@@ -57,7 +57,7 @@ node ('dev-build.globalvirtual.world') {
 
        stage('Build Docker'){
 
-            sh './dockerBuild.sh'
+      //      sh './dockerBuild.sh'
        }
 
        stage('Deploy'){
