@@ -28,7 +28,7 @@ node ('dev-build.globalvirtual.world') {
         DB_ENGINE    = 'sqlite'
         WORKSPACE  = '/home/jenkins/workspace/'
        //PATH+EXTRA='/usr/sbin:/usr/bin:/sbin:/bin'
-        PATH = '/usr/sbin:/usr/bin:/sbin:/bin'
+        PATH = '/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/node:/usr/bin/npm'
     }
 
     currentBuild.result = "SUCCESS"
@@ -49,10 +49,8 @@ node ('dev-build.globalvirtual.world') {
          print "Environment 2 WORKSPACE = : ${env.WORKSPACE}"
          print "Environment 3 PATH = : ${env.PATH}"
          //print "Environment 4 PATH+EXTRA = : ${env.PATH+EXTRA}"
-         def command = "npm install"
-         sh 'printenv'
-                  
-
+         
+         sh 'printenv'          
          sh 'node -v'
          sh 'npm prune'
          sh 'npm install'
