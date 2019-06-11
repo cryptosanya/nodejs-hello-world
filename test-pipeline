@@ -52,7 +52,7 @@ node ('dev-build.globalvirtual.world') {
          sh 'npm prune'
          sh 'npm install'
      //    sh 'npm test3'
-         node index.js
+     //    node index.js
 
        }
 
