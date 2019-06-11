@@ -36,27 +36,17 @@ node ('dev-build.globalvirtual.world') {
           checkout scm
        }
 
-            environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
-    }
-
-      stages {
-        stage('Build') {
-            steps {
-                sh 'printenv'
-            }
-        }
-    }
-}       
+           environment {
+         NODE_ENV = "test"
+                }
  
-   /*     stage('Test'){
-
-         env.NODE_ENV = "test"
-
-         print "Environment will be : ${env.NODE_ENV}"
-         
-     */          
+        stage('Test'){
+                
+                steps {
+                   sh 'printenv'
+                }
+        }       
+               
                
 /*               
                
