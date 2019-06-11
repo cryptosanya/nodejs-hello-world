@@ -1,4 +1,3 @@
-node ('dev-build.globalvirtual.world')
 pipeline {
     agent { label 'dev-build.globalvirtual.world' }
     stages {
