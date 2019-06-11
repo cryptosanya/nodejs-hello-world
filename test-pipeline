@@ -41,7 +41,7 @@ node ('dev-build.globalvirtual.world') {
          env.NODE_ENV = "test"
 
          print "Environment will be : ${env.NODE_ENV}"
-         sh ('node -v')
+         def command = "npm install"
                   
 /*
          sh 'node -v'
