@@ -1,5 +1,6 @@
+node ('dev-build.globalvirtual.world')
 pipeline {
-    agent { label 'master' }
+    agent { label 'dev-build.globalvirtual.world' }
     stages {
         stage('build') {
             steps {
