@@ -1,0 +1,17 @@
+pipeline {
+  agent {
+    label 'dev-build.globalvirtual.world'
+  }
+
+  stages {
+    stage ('STAGE NAME TEST') {
+      steps {
+        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
+          sh '''
+            //code block
+            echo Hello from the shell
+            uptime
+          '''
+        }
+      }
+    }
