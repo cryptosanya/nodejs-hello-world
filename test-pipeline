@@ -50,14 +50,14 @@ node ('dev-build.globalvirtual.world') {
          print "Environment 3 PATH = : ${env.PATH}"
          //print "Environment 4 PATH+EXTRA = : ${env.PATH+EXTRA}"
          def command = "npm install"
-                   sh 'printenv'
+         sh 'printenv'
                   
-/*
+
          sh 'node -v'
          sh 'npm prune'
          sh 'npm install'
          sh 'npm test'
-*/
+
                       
        }
 
@@ -84,9 +84,9 @@ node ('dev-build.globalvirtual.world') {
 
          mail body: 'project build successful',
                      from: 'sys@showmebiz.pro',
-                     replyTo: 'openainow@gmail.com',
+                     replyTo: 'ci@showmebiz.pro',
                      subject: 'project build successful',
-                     to: 'andrii.kyianov@gmail.com'
+                     to: 'anton.nagornyi@gmail.com, crypto.sanya@gmail.com'
        }
 
 
@@ -98,9 +98,9 @@ node ('dev-build.globalvirtual.world') {
 
             mail body: "project build error is here: ${env.BUILD_URL}" ,
             from: 'sys@showmebiz.pro',
-            replyTo: 'openainow@gmail.com',
+            replyTo: 'ci@showmebiz.pro',
             subject: 'project build failed',
-            to: 'andrii.kyianov@gmail.com'
+            to: 'anton.nagornyi@gmail.com, crypto.sanya@gmail.com'
 
         throw err
     }
