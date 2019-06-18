@@ -45,26 +45,26 @@ node ('dev-build.globalvirtual.world') {
          env.NODE_ENV = "test"
          print "Environment 1 NODE_ENV= : ${env.NODE_ENV}"
          print "Environment 2 WORKSPACE = : ${env.WORKSPACE}"
-   //      print "Environment 3 PATH = : ${env.PATH}"
+         print "Environment 3 PATH = : ${env.PATH}"
          print "Environment will be : ${env.NODE_ENV}"
 
-     //    sh 'node -v'
-    //     sh 'npm prune'
+       sh 'node -v'
+         sh 'npm prune'
          sh 'npm install'
-     //    sh 'npm test3'
+         sh 'npm test3'
      //    node index.js
 
        }
 
        stage('Build Docker'){
 
-      //      sh './dockerBuild.sh'
+            sh './dockerBuild.sh'
        }
 
        stage('Deploy'){
 
          echo 'Push to Repo'
-    //     sh './dockerPushToRepo.sh'
+         sh './dockerPushToRepo.sh'
 
          echo 'ssh to web server and tell it to pull new image'
     //     sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
@@ -74,8 +74,8 @@ node ('dev-build.globalvirtual.world') {
        stage('Cleanup'){
 
          echo 'prune and cleanup'
-        // sh 'npm prune'
-        //sh 'rm node_modules -rf'
+         sh 'npm prune'
+         sh 'rm node_modules -rf'
 
          mail body: 'project build successful',
                      from: 'sys@showmebiz.pro',
