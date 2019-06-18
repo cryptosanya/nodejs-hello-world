@@ -45,7 +45,7 @@ node ('dev-build.globalvirtual.world') {
          env.NODE_ENV = "test"
          print "Environment 1 NODE_ENV= : ${env.NODE_ENV}"
          print "Environment 2 WORKSPACE = : ${env.WORKSPACE}"
-         print "Environment 3 PATH = : ${env.PATH}"
+   //      print "Environment 3 PATH = : ${env.PATH}"
          print "Environment will be : ${env.NODE_ENV}"
 
          sh 'node -v'
